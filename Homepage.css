@@ -1,0 +1,57 @@
+#NavBar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+   
+}
+#NavBar img{
+  width: 120px;
+}
+#NavBar input{
+    padding: 10px 90px 10px 90px;
+}
+#NavBar>div:nth-child(2){
+    margin-top: 10px;
+}
+
+#NavBar>div:nth-child(3) i{
+   
+   margin-top: 25px;
+   margin-right: 50px;
+}
+#NavBar>div:nth-child(3) h2{
+   margin-bottom: 140px;
+}
+
+/* ----------------------------------------------- */
+#Nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+   padding: 10px 10px 15px 10px;
+}
+#Nav a{
+    text-decoration: none;
+     color: black;
+     font-size: 15px;
+   padding: 30px;
+     margin-top: 50px;
+     align-items: center;
+}
+#Nav>div:nth-child(2){
+    margin-top: 8px;
+  
+    margin-left: 22%;
+}
+
+
+/* ----------------------------------------------- */
+
+#mid-section{
+    display: flex;
+    margin-top: 10px;
+}
+#mid-section>div:nth-child(1){
+    margin-top: 25px;
+}
