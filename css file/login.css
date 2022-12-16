@@ -1,0 +1,19 @@
+body{
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    margin-left: 30%;
+    font-size: 30px;
+    background-color: pink;
+}
+h1{
+   color:rgb(171, 55, 55)
+}
+button{
+    padding: 10px 120px 15px 120px;
+    background-color: rgb(196, 127, 150);
+    color: white;
+    border: none;
+    margin-top: 25px;
+}
