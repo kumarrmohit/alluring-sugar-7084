@@ -1,3 +1,12 @@
+h2>span{
+    color: rgb(171, 55, 55);
+    
+}
+#head{
+    margin-left: 80%;
+  
+    color: deeppink;
+}
 #NavBar{
     display: flex;
     justify-content: space-between;

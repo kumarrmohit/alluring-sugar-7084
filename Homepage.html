@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <h2 id="head">WELCOME_<span></span></h2>
     <div id="NavBar">
         <div>
             <img src="https://www.bing.com/th?id=OIP.A9r1NkkonZGSHWYKPBP0IwHaEU&w=327&h=190&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
@@ -24,7 +25,7 @@
         </div>
         <div>
             <i class="fa-solid fa-heart fa-2xl"></i>
-            <i class="fa-solid fa-user fa-2xl"></i>
+            <a href="login.html"><i class="fa-solid fa-user fa-2xl"></i></a>
         </div>
 
 
@@ -411,3 +412,6 @@
 </body>
 
 </html>
+<script>
+    document.querySelector("h2>span").textContent=localStorage.getItem("username")
+</script>
