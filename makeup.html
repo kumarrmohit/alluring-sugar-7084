@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css file/makeup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="NavBar">
+        <div>
+            <a href="Homepage.html"><img
+                    src="https://www.bing.com/th?id=OIP.A9r1NkkonZGSHWYKPBP0IwHaEU&w=327&h=190&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    alt=""></a>
+        </div>
+        <div>
+            <input type="text" placeholder="All Categories">
+            <input type="text" placeholder="Enter your search...">
+        </div>
+        <div>
+            <i class="fa-solid fa-heart fa-2xl"></i>
+            <a href="login.html"><i class="fa-solid fa-user fa-2xl"></i></a>
+        </div>
+
+
+    </div>
+
+    <div id="Nav">
+
+        <div>
+            <a href="#">MAKEUP</a>
+            <a href="#">SKIN</a>
+            <a href="#">HAIR</a>
+            <a href="#">PERSONAL CARE</a>
+            <a href="#">MOM & BABY CARE</a>
+            <a href="#">FRAGRANCE</a>
+            <a href="#">AYURVEDA</a>
+            <a href="#">BRANDS</a>
+        </div>
+        <div>
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+        </div>
+    </div>
+
+    <div id="cart-page">
+
+    </div>
+    <script>
+        let products = [
+            {
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68caf778903487000186_1.jpg",
+                name: "Miss Claire Eyeshadow Kit 3716-11-1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68caf778903487000186_1.jpg",
+                name: "Miss Claire Eyeshadow Kit - 3716-11-2",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/f/ff360238903487002210_1.jpg",
+                name: "Miss Claire M14 - Eyeshadow Blending Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/4/84de0238903487002357_1.jpg",
+                name: "Miss Claire M22 - Contour/Blush Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/1/b14f0238903487002494_1.jpg",
+                name: "Miss Claire M29 - Angled Shader Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_5.jpg",
+                name: "Miss Claire Professional Eyeshadow Palette - 1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_5.jpg",
+                name: "Miss Claire Professional Eyeshadow Palette - 1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68caf778903487000186_1.jpg",
+                name: "Miss Claire Eyeshadow Kit 3716-11-1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/68caf778903487000186_1.jpg",
+                name: "Miss Claire Eyeshadow Kit - 3716-11-2",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/f/ff360238903487002210_1.jpg",
+                name: "Miss Claire M14 - Eyeshadow Blending Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/4/84de0238903487002357_1.jpg",
+                name: "Miss Claire M22 - Contour/Blush Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/1/b14f0238903487002494_1.jpg",
+                name: "Miss Claire M29 - Angled Shader Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_5.jpg",
+                name: "Miss Claire Professional Eyeshadow Palette - 1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10_5.jpg",
+                name: "Miss Claire Professional Eyeshadow Palette - 1",
+                price: Math.ceil(Math.random() * 1000),
+            },
+            {
+
+                ImageUrl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/4/84de0238903487002357_1.jpg",
+                name: "Miss Claire M22 - Contour/Blush Brush",
+                price: Math.ceil(Math.random() * 1000),
+            },
+
+
+
+        ]
+        localStorage.setItem('products', JSON.stringify(products));
+        let storedProducts = JSON.parse(localStorage.getItem('products'))
+
+        storedProducts.forEach(function (el) {
+            let parent = document.querySelector("#cart-page")
+            let card = document.createElement("div")
+            let img = document.createElement('img')
+            img.setAttribute("src", el.ImageUrl)
+            let name = document.createElement('p')
+            name.textContent = el.name
+            let price = document.createElement('p')
+            price.textContent = el.price;
+            let cartBtn = document.createElement('button')
+            cartBtn.textContent = "Add To Cart"
+
+            cartBtn.addEventListener("click",function(){
+            let favData=JSON.parse(localStorage.getItem("cartdata"))||[]
+             favData.push(el)
+            localStorage.setItem("cartdata",JSON.stringify(favData))
+            })
+            card.append(img, name, price, cartBtn)
+            parent.append(card)
+        })
+    </script>
