@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css file/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="NavBar">
+        <div>
+            <a href="Homepage.html"><img
+                    src="https://www.bing.com/th?id=OIP.A9r1NkkonZGSHWYKPBP0IwHaEU&w=327&h=190&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    alt=""></a>
+        </div>
+        <div>
+            <input type="text" placeholder="All Categories">
+            <input type="text" placeholder="Enter your search...">
+        </div>
+        <div>
+            <i class="fa-solid fa-heart fa-2xl"></i>
+            <a href="login.html"><i class="fa-solid fa-user fa-2xl"></i></a>
+        </div>
+
+
+    </div>
+
+    <div id="Nav">
+
+        <div>
+            <a href="makeup.html">MAKEUP</a>
+            <a href="#">SKIN</a>
+            <a href="#">HAIR</a>
+            <a href="#">PERSONAL CARE</a>
+            <a href="#">MOM & BABY CARE</a>
+            <a href="#">FRAGRANCE</a>
+            <a href="#">AYURVEDA</a>
+            <a href="#">BRANDS</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </div>
+    </div>
+    <h2>SHOPPING CART</h2>
+    <h1 id="total">You have <span id="fav-total">0</span> product in the cart</h1>
+    <h2 id="total bill">Total Bill:- <span id="Bill">0</span> </h2>
+
+    <div id="cartappend">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let container = document.getElementById('cartappend')
+    let favData = JSON.parse(localStorage.getItem("cartdata")) || []
+    let TotalTask=document.getElementById("fav-total")
+    let TotalBill=document.getElementById("Bill")
+    let sum=0;
+        
+        
+    displayProduct(favData)
+
+    function displayProduct(data, i) {
+        container.innerHTML=null
+        TotalTask.textContent=data.length
+        data.forEach(function (el) {
+            let parent = document.querySelector("#cart-page")
+            let card = document.createElement("div")
+            let img = document.createElement('img')
+            img.setAttribute("src", el.ImageUrl)
+            let name = document.createElement('p')
+            name.textContent = el.name
+            let price = document.createElement('p')
+            price.textContent = el.price;
+            let sum=0
+            sum=sum+el.price
+            TotalBill.textContent=sum
+            let Remove = document.createElement('button')
+            Remove.textContent = "Remove Item"
+
+            Remove.addEventListener("click", function () {
+                favData.splice(i, 1)
+                localStorage.setItem("cartdata", JSON.stringify(favData))
+                displayProduct(favData)
+            })
+            card.append(img, name, price, Remove)
+            container.append(card)
+        })
+    }
+
+</script>
