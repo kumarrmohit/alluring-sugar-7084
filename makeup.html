@@ -161,6 +161,7 @@
             cartBtn.textContent = "Add To Cart"
 
             cartBtn.addEventListener("click",function(){
+                alert("Product added to cart successfully")
             let favData=JSON.parse(localStorage.getItem("cartdata"))||[]
              favData.push(el)
             localStorage.setItem("cartdata",JSON.stringify(favData))

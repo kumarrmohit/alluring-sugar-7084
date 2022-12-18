@@ -2,8 +2,17 @@ h2>span{
     color: rgb(171, 55, 55);
     
 }
+#headbar{
+    display: flex;
+    justify-content: space-between;
+}
+#bttn{
+    padding: 0px 10px -40px 10px;
+   color: white;
+   font-weight: bolder;
+}
 #head{
-    margin-left: 80%;
+  
   
     color: deeppink;
 }

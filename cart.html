@@ -61,16 +61,21 @@
 <script>
     let container = document.getElementById('cartappend')
     let favData = JSON.parse(localStorage.getItem("cartdata")) || []
-    let TotalTask=document.getElementById("fav-total")
-    let TotalBill=document.getElementById("Bill")
-    let sum=0;
-        
-        
+    let TotalTask = document.getElementById("fav-total")
+    let TotalBill = document.getElementById("Bill")
+
+
+
     displayProduct(favData)
 
     function displayProduct(data, i) {
-        container.innerHTML=null
-        TotalTask.textContent=data.length
+        container.innerHTML = null
+        TotalTask.textContent = data.length
+        var a = data.reduce((acc, curr) => {
+            acc += curr.price
+            return acc;
+        }, 0)
+        TotalBill.textContent = a
         data.forEach(function (el) {
             let parent = document.querySelector("#cart-page")
             let card = document.createElement("div")
@@ -78,11 +83,18 @@
             img.setAttribute("src", el.ImageUrl)
             let name = document.createElement('p')
             name.textContent = el.name
+            
             let price = document.createElement('p')
             price.textContent = el.price;
-            let sum=0
-            sum=sum+el.price
-            TotalBill.textContent=sum
+
+            let buy=document.createElement('button')
+             buy.textContent="Buy Now"
+
+             buy.addEventListener("click",function(){
+                alert("Please fill your address/payment detail")
+                window.location.assign("./shippment.html")
+             })
+
             let Remove = document.createElement('button')
             Remove.textContent = "Remove Item"
 
@@ -90,8 +102,11 @@
                 favData.splice(i, 1)
                 localStorage.setItem("cartdata", JSON.stringify(favData))
                 displayProduct(favData)
+
+             
+
             })
-            card.append(img, name, price, Remove)
+            card.append(img, name,price, Remove,buy)
             container.append(card)
         })
     }
